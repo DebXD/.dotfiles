@@ -10,7 +10,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "html", "cssls" },
+        ensure_installed = { "lua_ls", "tsserver", "html", "cssls", "tailwindcss" },
 
       })
     end
@@ -35,6 +35,10 @@ return {
       })
       lspconfig.cssls.setup({
         capabilities = capabilities
+      })
+      lspconfig.tailwindcss.setup({
+
+        capabilities = capabilities,
       })
 
 

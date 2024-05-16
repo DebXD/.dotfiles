@@ -20,3 +20,10 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 --find something on the current buffer
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+
+vim.keymap.set("n", "<leader>l", ":Lazy<CR>")
+
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.o.clipboard = "unnamedplus"

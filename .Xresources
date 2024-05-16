@@ -1,0 +1,13 @@
+! XTERM COLORS & FONTS
+! !-----------------------------------------------
+XTerm.vt100.foreground: white
+XTerm.vt100.background: rgb:14/14/14
+ XTerm.vt100.color0: rgb:28/28/28
+XTerm.vt100.faceName: JetBrainsMono Nerd Font:size=13:antialias=false
+XTerm-256color:Tc
+ XTerm.vt100.font: 7x13
+
+! XTERM COPY/PASTE
+! !----------------------------------------------
+XTerm.selectToClipboard: true
+
