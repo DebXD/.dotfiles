@@ -1,3 +1,3 @@
 return {
-    require "plugins.themes.onedark"
+    require "plugins.themes.onedarkpro"
 }
