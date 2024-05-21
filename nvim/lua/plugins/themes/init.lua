@@ -1,3 +1,3 @@
 return {
-    require "plugins.themes.onedarkpro"
+    require "plugins.themes.everforest"
 }

@@ -12,11 +12,9 @@ return {
 				"css",
 				"html",
 				"javascript",
-				"lua",
-				"tsx",
 				"typescript",
 			},
-			autotag = { enable = true },
+			--autotag = { enable = true },
 		})
 	end,
 }

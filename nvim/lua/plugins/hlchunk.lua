@@ -2,10 +2,10 @@ return {
   "shellRaining/hlchunk.nvim",
   config = function()
     require("hlchunk").setup({
-      style = { "#abcabc", "#cdefef" },
-            blank = {
-        enable = false,
-      }
+      -- style = { "#abcabc", "#cdefef" },
+      --       blank = {
+      --   enable = false,
+      -- }
     })
   end
 }
