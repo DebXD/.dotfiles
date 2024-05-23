@@ -1,3 +1,3 @@
 return {
-    require "plugins.themes.everforest"
+    require "plugins.themes.gruvbox"
 }

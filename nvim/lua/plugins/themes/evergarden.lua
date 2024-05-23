@@ -3,7 +3,7 @@ return {
   config = function()
     require("evergarden").setup({
       transparent_background = true,
-      contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
+      contrast_dark = 'hard', -- 'hard'|'medium'|'soft'
     })
     vim.cmd("colorscheme evergarden")
   end

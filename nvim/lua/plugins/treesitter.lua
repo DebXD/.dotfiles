@@ -13,6 +13,7 @@ return {
 				"html",
 				"javascript",
 				"typescript",
+        "markdown_inline",
 			},
 			--autotag = { enable = true },
 		})

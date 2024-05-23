@@ -1,0 +1,2 @@
+bindkey -s ^f "~/.config/tmux/scripts/tmux-sessionizer.sh\n"
+export PATH=$HOME/.local/bin:$PATH

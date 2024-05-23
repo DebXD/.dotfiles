@@ -25,4 +25,7 @@ dynamic_padding = true
 padding = { x = 5, y = 5 }
 opacity = 0.9
 
+[cursor]
+style = { shape = "Beam", blinking = "Never"}
+
 
