@@ -48,8 +48,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+home/debxd/.config/i3/scripts/change_mouse_speed.sh &
 /usr/bin/pipewire &
 /usr/bin/pipewire-pulse &
 /usr/bin/wireplumber &
-/home/debxd/.config/i3/scripts/change_mouse_speed.sh &
-exec i3 
+exec dwm
