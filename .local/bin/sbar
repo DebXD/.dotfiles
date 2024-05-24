@@ -17,26 +17,27 @@ update_time () {
 	time="$(date "+[%a %d %b] [%I:%M %P]")" 
 }
 
-update_weather () { 
-	weather="$(curl -s "wttr.in?format=1"| sed -E "s/^(.).*\+/\1/")" 
-}
+# update_weather () { 
+	# weather="$(curl -s "wttr.in?format=1"| sed -E "s/^(.).*\+/\1/")" 
+# }
 
 update_bat () { 
 	# you might need to change the path depending on your device
-	read -r bat_status </sys/class/power_supply/BAT0/status
-	read -r bat_capacity </sys/class/power_supply/BAT0/capacity
-	bat="$bat_status $bat_capacity%"
+	# read -r bat_status </sys/class/power_supply/BAT0/status
+	# read -r bat_capacity </sys/class/power_supply/BAT0/capacity
+  bat=$(battery)
 }
 
 update_vol () { 
-	vol="$([ "$(pamixer --get-mute)" = "false" ] && printf '🔊' || printf '🔇')$(pamixer --get-volume)%"
+  volume=$(volume)
+}
+
+update_nettraf(){
+  nettraf=$(nettraf)
 }
 
 update_backlight () { 
-	# you might need to change the path depending on your device
-	read -r actual_brightness </sys/class/backlight/amdgpu_bl1/actual_brightness
-	read -r max_brightness </sys/class/backlight/amdgpu_bl1/max_brightness
-	backlight="☀$((actual_brightness*100/max_brightness))%"
+	backlight=$(brightnessctl get)
 }
 
 # For calcurse users, refer https://github.com/pystardust/automeet
@@ -53,7 +54,7 @@ update_backlight
 
 display () { 
 	#printf "%s\n" " $event [$weather] [$memory $cpu] [$bat] [$backlight] [$vol] $time "
-	xsetroot -name " [$weather] [$memory $cpu] [$bat] [$backlight] [$vol] $time "
+	xsetroot -name " [$nettraf] [$memory $cpu] [$bat] [$backlight] [$volume] $time "
 }
 
 # SIGNALLING
@@ -71,14 +72,17 @@ do
 		# to update item ever n seconds with a offset of m
 		## [ $((sec % n)) -eq m ] && udpate_item
 		[ $((sec % 5 )) -eq 0 ] && update_time 	# update time every 5 seconds
+		[ $((sec % 1 )) -eq 0 ] && update_backlight 	# update time every 5 seconds
+		[ $((sec % 2 )) -eq 0 ] && update_nettraf # update time every 5 seconds
+		[ $((sec % 1 )) -eq 0 ] && update_vol # update time every 5 seconds
 		[ $((sec % 15)) -eq 0 ] && update_cpu 	# update cpu every 15 seconds
 		[ $((sec % 15)) -eq 0 ] && update_memory
 		[ $((sec % 60)) -eq 0 ] && update_bat
-		[ $((sec % 3600)) -eq 2 ] && update_weather 
+		# [ $((sec % 3600)) -eq 2 ] && update_weather 
 		#[ $((sec % 300)) -eq 1 ] && update_event
 
 		# how often the display updates ( 5 seconds )
-		[ $((sec % 5 )) -eq 0 ] && display
+		[ $((sec % 1 )) -eq 0 ] && display
 		sec=$((sec + 1))
 	}
 done 

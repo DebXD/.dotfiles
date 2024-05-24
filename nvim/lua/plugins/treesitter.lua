@@ -15,7 +15,7 @@ return {
 				"typescript",
         "markdown_inline",
 			},
-			--autotag = { enable = true },
+			autotag = { enable = true },
 		})
 	end,
 }

@@ -1,0 +1,5 @@
+#!/bin/sh
+blevel=$(brightnessctl get)
+
+echo "$blevel"
+

@@ -4,9 +4,9 @@ return {
   priority = 1000,
   config = function()
     require("everforest").setup({
-      transparent_background_level = 100,
+      transparent_background_level = 0,
       italics = true,
-      dim_inactive_windows = true,
+      dim_inactive_windows = false,
     })
     vim.cmd("colorscheme everforest")
   end
