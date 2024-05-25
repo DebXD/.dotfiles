@@ -14,7 +14,7 @@ update_memory () {
 }
 
 update_time () { 
-	time="$(date "+[%a %d %b] [%I:%M %P]")" 
+	time="$(date "+[ %a %d %b] [%I:%M %P]")" 
 }
 
 # update_weather () { 
@@ -37,7 +37,7 @@ update_nettraf(){
 }
 
 update_backlight () { 
-	backlight=$(brightnessctl get)
+  backlight=$(($(brightnessctl get)*100/255))%
 }
 
 # For calcurse users, refer https://github.com/pystardust/automeet
@@ -54,7 +54,7 @@ update_backlight
 
 display () { 
 	#printf "%s\n" " $event [$weather] [$memory $cpu] [$bat] [$backlight] [$vol] $time "
-	xsetroot -name " [$nettraf] [$memory $cpu] [$bat] [$backlight] [$volume] $time "
+	xsetroot -name " [ $nettraf] [ $memory  $cpu] [ $bat] [ $backlight] [  $volume] $time "
 }
 
 # SIGNALLING
