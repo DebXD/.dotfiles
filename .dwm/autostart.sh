@@ -1,6 +1,5 @@
 brightnessctl set 10%
-feh --bg-scale ~/Pictures/Wallpapers/gruvbox_spac.jpg
-redshift -O 4000
+feh --bg-scale ~/.config/hypr/wallpaper/pagani.png
 xautolock -time 10 -locker slock
 
 
