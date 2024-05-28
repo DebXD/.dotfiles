@@ -1,3 +1,3 @@
 return {
-    require "plugins.themes.nightowl"
+    require "plugins.themes.everforest"
 }
