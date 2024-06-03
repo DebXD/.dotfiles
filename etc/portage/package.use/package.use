@@ -1,0 +1,57 @@
+net-misc/networkmanager -bluetooth -systemd 
+
+app-emulation/libvirt pcap virt-network numa fuse macvtap vepa qemu policykit
+
+app-emulation/virt-manager gui policykit
+
+media-video/pipewire sound-server pipewire-alsa -bluetooth echo-cancel ffmpeg extra flatpak
+
+media-sound/pulseaudio -daemon
+
+media-libs/libcanberra udev alsa
+
+sys-apps/flatpak X policykit seccomp 
+
+gui-apps/waybar -systemd -experimental -test pipewire pulseaudio jack libinput logind  mpd mpris network sndio tray udev upower wifi
+
+gnome-extra/nemo exif wayland
+
+media-video/mpv X wayland alsa cli drm egl opengl pipewire pulseaudio vaapi vdpau vulkan
+
+media-libs/mesa vulkan opencl
+
+media-libs/vulkan-loader layers
+
+net-vpn/wireguard-tools wg-quick
+
+x11-drivers/nvidia-drivers tools powerd modules 
+
+gnome-base/gvfs mtp udisks policykit fuse keyring
+
+media-fonts/fontawesome ttf otf
+
+www-client/firefox -X clang dbus wayland geckodriver hardend debug hwaccel jumbo-build gmp-autoupdate lto openh264 pulseaudio eme-free -libproxy -telemetry
+
+media-sound/cava pipewire
+
+app-admin/keepassxc autotype browser X keeshare network
+
+sys-libs/zlib minizip
+
+games-util/steam-launcher trayicon
+
+media-video/handbrake gtk nvenc x265 fdk gstreamer nvdec
+
+#media-video/ffmpeg X amf  bluray cpudetection cuda encode fdk doc libdrm mp3 network libxml2 speex svg amr jpegxl nvenc openal opencl opengl openh264 opus pulseaudio rav1e threads truetype vaapi vdpau vidstab vorbis vulkan x264 x265 xvid webp vpx shaderc zlib iconv amrenc oss modplug libsoxr jpeg2k libplacebo codec2 zimg
+
+net-vpn/wireguard-tools wg-quick
+
+app-emulation/qemu pipewire opengl zstd udev ssh spice 
+
+gui-apps/swaybg gdk-pixbuf
+   
+media-gfx/imagemagick jpeg png
+
+media-fonts/nerdfonts hack ibmplexmono cascadiacode
+
+app-emulation/qemu usbredir

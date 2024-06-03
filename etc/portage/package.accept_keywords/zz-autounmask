@@ -1,0 +1,31 @@
+# package.accept_keywords# required by brightnessctl (argument)
+=app-misc/brightnessctl-0.5.1 ~amd64
+# required by pywal (argument)
+=x11-misc/pywal-3.3.0 ~amd64
+# required by nerd-icons (argument)
+=app-emacs/nerd-icons-0.1.0 ~amd64
+# required by nerdfonts (argument)
+=media-fonts/nerdfonts-3.2.1 ~amd64
+# required by nvtop (argument)
+=sys-process/nvtop-3.0.2 ~amd64
+# required by swaync (argument)
+=gui-apps/swaync-0.10.1-r1 ~amd64
+# required by lf (argument)
+=app-misc/lf-31 ~amd64
+# required by clipman (argument)
+=gui-apps/clipman-1.6.3 ~amd64
+# required by telegram-desktop-bin (argument)
+=net-im/telegram-desktop-bin-5.0.1 ~amd64
+# required by gui-apps/hypridle-0.1.2-r1::guru
+# required by hypridle (argument)
+=dev-cpp/sdbus-c++-1.4.0-r1 ~amd64
+# required by hypridle (argument)
+=gui-apps/hypridle-0.1.2-r1 ~amd64
+# required by swww (argument)
+=gui-apps/swww-0.9.5 ~amd64
+# required by hyprlock (argument)
+=gui-apps/hyprlock-0.3.0-r2 ~amd64
+# required by swaylock-effects (argument)
+=gui-apps/swaylock-effects-1.7.0.0 ~amd64
+# required by www-apps/jellyfin-bin (argument)
+=www-apps/jellyfin-bin-10.9.3 ~amd64

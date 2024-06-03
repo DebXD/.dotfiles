@@ -1,0 +1,47 @@
+# package.use# required by media-libs/mesa-24.0.7::gentoo[-video_cards_r600,-video_cards_r300,video_cards_radeonsi,-video_cards_radeon]
+# required by x11-libs/gtk+-3.24.41::gentoo[wayland]
+# required by x11-themes/adwaita-icon-theme-45.0::gentoo
+>=x11-libs/libdrm-2.4.120 video_cards_radeon
+# required by dev-libs/libayatana-appindicator-0.5.92::gentoo
+# required by gui-apps/waybar-0.10.0::gentoo[tray]
+# required by waybar (argument)
+>=dev-libs/libdbusmenu-16.04.0-r2 gtk3
+# required by x11-misc/pywal-3.3.0::guru
+# required by pywal (argument)
+>=media-gfx/imagemagick-7.1.1.25 jpeg
+# required by games-util/steam-launcher-1.0.0.79::steam-overlay[video_cards_nvidia]
+# required by games-util/steam-launcher (argument)
+>=x11-drivers/nvidia-drivers-550.78 abi_x86_32
+# required by dev-libs/nss-3.90.2-r1::gentoo
+# required by net-im/discord-0.0.54::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-db/sqlite-3.45.3 abi_x86_32
+# required by dev-db/sqlite-3.45.3::gentoo[readline]
+# required by dev-libs/nss-3.90.2-r1::gentoo
+# required by net-im/discord-0.0.54::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/readline-8.1_p2-r2 abi_x86_32
+# required by gui-apps/swaync-0.10.1-r1::guru
+# required by swaync (argument)
+>=gui-libs/gtk-layer-shell-0.8.2 vala introspection
+# required by dev-qt/qtwayland-5.15.13::gentoo
+>=dev-qt/qtgui-5.15.13 egl
+# required by media-video/mpv-0.38.0::gentoo
+# required by net-misc/ytfzf-2.6.2::gentoo[-minimal]
+# required by ytfzf (argument)
+>=media-video/ffmpeg-6.1.1-r5 vdpau vaapi
+# required by app-emulation/libvirt-9.8.0-r2::gentoo[virt-network]
+# required by dev-python/libvirt-python-9.8.0::gentoo
+>=net-dns/dnsmasq-2.90 script
+# required by app-crypt/swtpm-0.8.1-r2::gentoo
+# required by app-emulation/libvirt-9.8.0-r2::gentoo[qemu]
+# required by dev-python/libvirt-python-9.8.0::gentoo
+>=net-libs/gnutls-3.8.0 tools pkcs11
+# required by app-emulation/virt-manager-4.1.0-r1::gentoo[-test,gui]
+# required by virt-manager (argument)
+>=net-misc/spice-gtk-0.42-r3 usbredir
+# required by www-apps/jellyfin-bin-10.9.3::gentoo
+# required by www-apps/jellyfin-bin (argument)
+>=media-video/ffmpeg-6.1.1-r5 vpx x264

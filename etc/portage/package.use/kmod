@@ -1,0 +1,3 @@
+# For Enabling Compressing on kernel modules
+sys-apps/kmod lzma zlib
+
