@@ -9,11 +9,16 @@ return {
 			highlight = { enable = true },
 			indent = { enable = true },
 			ensure_installed = {
+        "bash",
 				"css",
 				"html",
 				"javascript",
 				"typescript",
+        "markdown",
         "markdown_inline",
+        "tsx",
+        "yaml",
+        "lua"
 			},
 			autotag = { enable = true },
 		})
