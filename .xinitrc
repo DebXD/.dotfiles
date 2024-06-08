@@ -49,7 +49,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 home/debxd/.config/i3/scripts/change_mouse_speed.sh &
-/usr/bin/pipewire &
-/usr/bin/pipewire-pulse &
-/usr/bin/wireplumber &
-exec dwm
+pipewire &
+pipewire-pulse &
+wireplumber &
+picom &
+sbar &
+exec dbus-run-session dwm
