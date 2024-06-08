@@ -14,15 +14,15 @@
 
 * {
   border: none;
-  font-family: DejaVu Sans Mono;
-  font-size: 12px;
+  font-family: CaskaydiaCove Nerd Font;
+  font-size: 13px;
   min-height: 0;
 }
 
 window#waybar {
   background: @base;
   color: @color8;
-  margin: 5px;
+  margin: 10px;
 }
 
 tooltip {
@@ -51,7 +51,7 @@ tooltip {
   border: 1px solid @crust;
   font-weight: 600;
   margin: 6px 0 6px 0;
-  padding: 1px 5px;
+  padding: 3.5px 16px;
 }
 
 #tray {
@@ -64,8 +64,8 @@ tooltip {
   font-weight: Bold;
   margin-left: 10px;
   margin-right: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 3.5px;
+  padding-right: 3.5px;
 }
 
 #workspaces :nth-child(5) {
@@ -136,8 +136,9 @@ tooltip {
 
 #custom-swaync {
   color: @color1;
-    margin-right: 5px;
-    padding-left: 10px;
+  margin-right: 10px;
+  margin-right: 10px;
+  padding-right: 18px;
 }
 
 #network {

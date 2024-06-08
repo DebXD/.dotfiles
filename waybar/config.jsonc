@@ -3,20 +3,23 @@
   "position": "top",
   "mod": "dock",
   "exclusive": true,
-  "passtrough": false,
-  "gtk-layer-shell": true,
+  // "passtrough": false,
+  // "gtk-layer-shell": true,
   "height": 0,
-  "modules-left": ["hyprland/workspaces"],
+  "margin-top" :5,
+  "margin-left" :10,
+  "margin-right" :10,
+  "modules-left": ["sway/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
     "network",
     "custom/night",
     "pulseaudio",
-    "upower",
+    "battery",
     "custom/swaync"
   ],
-  "hyprland/window": {
+  "sway/window": {
     "format": "{}",
     "max-length": 50
   },
@@ -65,7 +68,7 @@
   "network": {
     "format": "{ifname}",
     "format-wifi": "󰤨   {essid} {bandwidthTotalBytes}",
-    "format-ethernet": "  {bandwidthTotalBytes}",
+    "format-ethernet": "  {bandwidthTotalBytes}",
     "format-disconnected": "󰤭 ",
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
     "tooltip-format-wifi": "󰤢   Signal Strength:  {signalStrength}%",
@@ -75,9 +78,20 @@
     "max-length": 50,
     "interval": 5
   },
-  "upower": {
-
-  },
+   "battery": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false,
+        "on-click": "2"
+    },
   "custom/night" : {
 "icon-size" : 16,
 "format" : "  ",
