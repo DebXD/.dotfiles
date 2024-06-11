@@ -20,7 +20,7 @@ return {
         "yaml",
         "lua"
 			},
-			autotag = { enable = true },
+			-- autotag = { enable = true },
 		})
 	end,
 }

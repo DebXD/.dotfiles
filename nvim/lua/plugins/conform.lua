@@ -15,6 +15,8 @@ return {
         json = { "prettierd", "prettier", },
         yaml = { "prettierd", "prettier", },
         markdown = { "prettierd", "prettier", },
+        rust = {"rusfmt"},
+        go = {"gofmt"}
       },
       -- format on leader + f
       vim.keymap.set("n", "<leader>f", function()
