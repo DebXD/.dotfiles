@@ -12,7 +12,7 @@ end
 
 -- Font
 config.font = wezterm.font({
-	family = "Firacode Nerd Font Mono",
+	family = "Firacode Nerd Font",
 	-- harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 })
 -- config.window_padding = {
@@ -21,7 +21,7 @@ config.font = wezterm.font({
 --   top = 20,
 --   bottom = 20,
 -- }
-config.font_size = 16
+config.font_size = 14
 
 -- Theme
 
@@ -57,8 +57,8 @@ config.font_size = 16
 
 config.colors = {
 	foreground = "#fff4d2",
-	-- background = "#202020",
-	background = "#000000",
+	background = "#202020",
+	-- background = "#000000",
 
 	cursor_bg = "#bdae93",
 	cursor_fg = "#665c54",
@@ -92,7 +92,7 @@ config.colors = {
 }
 
 -- Opacity
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 
 -- Tab bar
 config.enable_tab_bar = false
