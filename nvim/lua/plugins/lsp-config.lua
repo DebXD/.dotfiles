@@ -12,8 +12,7 @@ return {
 			local ensure_installed = {
 				"stylua", -- Used to format Lua code
 				"prettier",
-				"prettierd",
-				"eslint_d",
+				"eslint",
 			}
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 		end,

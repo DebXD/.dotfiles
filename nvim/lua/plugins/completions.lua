@@ -56,34 +56,35 @@ return {
 					{ name = "buffer" },
 					{ name = "path" },
 				}),
-				-- formatting = {
-				--   -- icons on completion
-				--   format = lspkind.cmp_format({
-				--     maxwidth = 50,
-				--     ellipsis_char = '...',
-				--     mode = "symbol_text",
-				--     -- completion provider
-				--     menu = ({
-				--       buffer = "[Buffer]",
-				--       nvim_lsp = "[LSP]",
-				--       luasnip = "[LuaSnip]",
-				--       nvim_lua = "[Lua]",
-				--       latex_symbols = "[Latex]",
-				--     })
-				--   })
-				-- },
 				formatting = {
-					fields = { "kind", "abbr", "menu" },
-					format = function(entry, vim_item)
-						local kind =
-							require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
-						local strings = vim.split(kind.kind, "%s", { trimempty = true })
-						kind.kind = " " .. (strings[1] or "") .. " "
-						kind.menu = "    (" .. (strings[2] or "") .. ")"
-
-						return kind
-					end,
+					-- icons on completion
+					format = require("lspkind").cmp_format({
+						maxwidth = 50,
+						ellipsis_char = "...",
+						mode = "symbol_text",
+						-- completion provider
+						menu = {
+							buffer = "[Buffer]",
+							nvim_lsp = "[LSP]",
+							luasnip = "[LuaSnip]",
+							nvim_lua = "[Lua]",
+							latex_symbols = "[Latex]",
+						},
+					}),
 				},
+				--
+				-- formatting = {
+				-- 	fields = { "kind", "abbr", "menu" },
+				-- 	format = function(entry, vim_item)
+				-- 		local kind =
+				-- 			require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+				-- 		local strings = vim.split(kind.kind, "%s", { trimempty = true })
+				-- 		kind.kind = " " .. (strings[1] or "") .. " "
+				-- 		kind.menu = "    (" .. (strings[2] or "") .. ")"
+				--
+				-- 		return kind
+				-- 	end,
+				-- },
 			})
 		end,
 	},
